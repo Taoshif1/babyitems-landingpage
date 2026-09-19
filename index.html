@@ -19,9 +19,10 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">মূল কনটেন্টে যান</a>
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="#top" aria-label="সহজশপ হোম">
+        <a class="brand" href="#main-content" aria-label="সহজশপ হোম">
           <span class="brand-mark" aria-hidden="true">সহ</span>
           <span>
             <strong>সহজশপ</strong>
@@ -33,7 +34,7 @@
 
       <div class="trust-strip"><span class="live-dot" aria-hidden="true"></span>সারাদেশে ক্যাশ অন ডেলিভারি · পণ্য হাতে পেয়ে মূল্য পরিশোধ</div>
 
-      <main id="top">
+      <main id="main-content">
         <section class="hero section">
           <div class="eyebrow">শিশুর সৃজনশীলতার নতুন সঙ্গী</div>
           <h1>খেলতে খেলতে ছবি আঁকা শেখার আনন্দ</h1>
@@ -42,7 +43,7 @@
             <img id="video-preview" src="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ" alt="ড্রয়িং প্যাডের পণ্য ডেমো" />
             <div class="video-shade"></div>
             <div class="video-copy"><span class="video-label">ডেমো প্রিভিউ</span><strong id="video-title">স্মার্ট ড্রয়িং প্রজেক্টর</strong><span>ভিডিও ফাইল যুক্ত হলে এখানে চালানো যাবে</span></div>
-            <button class="play-demo" id="video-toggle" type="button" aria-label="ডেমো প্রিভিউ পরিবর্তন করুন">▶</button>
+            <button class="preview-next" id="video-toggle" type="button" aria-label="পরবর্তী পণ্য প্রিভিউ দেখুন">প্রিভিউ বদলান</button>
           </div>
           <div class="video-switcher">
             <button class="video-option is-active" type="button" data-video="demo" aria-pressed="true">
@@ -52,17 +53,17 @@
               <span class="thumb"><img src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE" alt="" loading="lazy" /></span><span><b>আনবক্সিং প্রিভিউ</b><small>বাস্তব ভিডিও পরে যুক্ত করা যাবে</small></span>
             </button>
           </div>
-          <p class="demo-note">এটি একটি ক্লায়েন্ট ডেমো। প্রকৃত ভিডিও ফাইল যুক্ত হলে এই অংশে HTML5 ভিডিও ব্যবহার করা যাবে।</p>
+          <p class="demo-note">এটি একটি ক্লায়েন্ট ডেমো। প্রকৃত ভিডিও ফাইল যুক্ত হলে এখানে সরাসরি ভিডিও চালানো যাবে।</p>
         </section>
 
         <section class="section products-section" id="products">
           <div class="section-heading"><div class="eyebrow">বিশেষ অফার</div><h2>জনপ্রিয় পণ্যসমূহ</h2><p>পছন্দের পণ্য বেছে নিয়ে অর্ডার ফর্মে যান</p></div>
           <div class="product-grid">
             <article class="product-card is-selected" data-product-card>
-              <span class="badge">৩৮% ছাড়</span><img src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE" alt="এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল" loading="lazy" /><div class="product-content"><h3>এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল</h3><p>বাচ্চাদের ছবি আঁকা শেখার ম্যাজিক্যাল প্রজেক্টর</p></div><div class="product-footer"><div><strong>৳৭৯৯</strong><del>৳১২৫০</del></div><button class="button product-button" type="button" data-name="এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল" data-price="799" data-image="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ">Order Now</button></div>
+              <span class="badge">৩৮% ছাড়</span><img src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE" alt="এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল" loading="lazy" /><div class="product-content"><h3>এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল</h3><p>বাচ্চাদের ছবি আঁকা শেখার ম্যাজিক্যাল প্রজেক্টর</p></div><div class="product-footer"><div><strong>৳৭৯৯</strong><del>৳১২৫০</del></div><button class="button product-button" type="button" data-name="এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল" data-price="799" data-image="https://lh3.googleusercontent.com/aida/AEtjO1WVo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE">Order Now</button></div>
             </article>
             <article class="product-card" data-product-card><span class="badge badge-green">বেস্টসেলার</span><img src="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ" alt="রিচার্জেবল এলসিডি রাইটিং ও ড্রয়িং প্যাড" loading="lazy" /><div class="product-content"><h3>রিচার্জেবল এলসিডি রাইটিং ও ড্রয়িং প্যাড</h3><p>চোখের ক্ষতি ছাড়া ডিজিটাল নোট ও স্কেচ প্যাড</p></div><div class="product-footer"><div><strong>৳৪৯৯</strong><del>৳৭৫০</del></div><button class="button product-button" type="button" data-name="রিচার্জেবল এলসিডি রাইটিং ও ড্রয়িং প্যাড" data-price="499" data-image="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ">Order Now</button></div></article>
-            <article class="product-card"><span class="badge badge-blue">নতুন</span><img src="https://lh3.googleusercontent.com/aida/AEtjO1WVo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE" alt="বাচ্চাদের ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড" loading="lazy" /><div class="product-content"><h3>বাচ্চাদের ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড</h3><p>রঙিন স্ক্রিনে আঁকা ও মুছে ফেলার সহজ আনন্দ</p></div><div class="product-footer"><div><strong>৳৬৯৯</strong><del>৳৯৫০</del></div><button class="button product-button" type="button" data-name="বাচ্চাদের ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড" data-price="699" data-image="https://lh3.googleusercontent.com/aida/AEtjO1WVo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE">Order Now</button></div></article>
+            <article class="product-card" data-product-card><span class="badge badge-blue">নতুন</span><img src="https://lh3.googleusercontent.com/aida/AEtjO1WVo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE" alt="বাচ্চাদের ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড" loading="lazy" /><div class="product-content"><h3>বাচ্চাদের ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড</h3><p>রঙিন স্ক্রিনে আঁকা ও মুছে ফেলার সহজ আনন্দ</p></div><div class="product-footer"><div><strong>৳৬৯৯</strong><del>৳৯৫০</del></div><button class="button product-button" type="button" data-name="বাচ্চাদের ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড" data-price="699" data-image="https://lh3.googleusercontent.com/aida/AEtjO1WVo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE">Order Now</button></div></article>
           </div>
           <div class="template-note">💡 এটি একটি ডেমো ক্যাটালগ। একই ডিজাইন সিস্টেমে আরও পণ্য সহজেই যুক্ত করা যাবে।</div>
         </section>
@@ -86,7 +87,7 @@
               </form>
             </div>
           </div>
-          <div class="success-box" id="success-box" hidden><div class="success-icon">✓</div><h2>ডেমো অর্ডার প্রস্তুত হয়েছে!</h2><p>এটি কেবল ক্লায়েন্ট প্রেজেন্টেশনের জন্য একটি সফলতার স্ক্রিন। কোনো প্রকৃত অর্ডার পাঠানো হয়নি।</p><div class="order-id"><span>ডেমো রেফারেন্স</span><strong id="order-id"></strong><div><span>মোট প্রদেয়</span><b>৳<i id="success-total"></i></b></div></div><button class="text-button" id="new-order" type="button">নতুন অর্ডার তৈরি করুন →</button></div>
+          <div class="success-box" id="success-box" role="status" aria-live="polite" hidden><div class="success-icon">✓</div><h2>ডেমো অর্ডার প্রস্তুত হয়েছে!</h2><p>এটি কেবল ক্লায়েন্ট প্রেজেন্টেশনের জন্য একটি সফলতার স্ক্রিন। কোনো প্রকৃত অর্ডার পাঠানো হয়নি।</p><div class="order-id"><span>ডেমো রেফারেন্স</span><strong id="order-id"></strong><div><span>মোট প্রদেয়</span><b>৳<i id="success-total"></i></b></div></div><button class="text-button" id="new-order" type="button">নতুন অর্ডার তৈরি করুন →</button></div>
         </section>
       </main>
 

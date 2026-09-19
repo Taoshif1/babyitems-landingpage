@@ -8,9 +8,30 @@
       <section class="admin-card dashboard" id="dashboard" hidden><div class="dashboard-head"><div><div class="eyebrow">ডেমো ড্যাশবোর্ড</div><h1>পণ্য ও স্টক</h1></div><button class="text-button" id="logout" type="button">লগআউট</button></div><div class="stats"><div><span>মোট পণ্য</span><strong>৩</strong></div><div><span>স্টকে আছে</span><strong>৩</strong></div><div><span>ডেমো অর্ডার</span><strong>১২</strong></div></div><div class="admin-list"><div><span><b>এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল</b><small>মূল্য: ৳৭৯৯</small></span><em>স্টকে আছে</em></div><div><span><b>রিচার্জেবল ড্রয়িং প্যাড</b><small>মূল্য: ৳৪৯৯</small></span><em>স্টকে আছে</em></div><div><span><b>ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড</b><small>মূল্য: ৳৬৯৯</small></span><em>স্টকে আছে</em></div></div><div class="template-note">ভবিষ্যতে এখানে পণ্য যোগ, সম্পাদনা, স্টক ও প্রকৃত অর্ডার ব্যবস্থাপনা যুক্ত করা যাবে।</div></section>
     </main>
     <script>
-      const login = document.querySelector("#login-form"), loginPanel = document.querySelector("#login-panel"), dashboard = document.querySelector("#dashboard"), error = document.querySelector("#login-error");
-      login.addEventListener("submit", (event) => { event.preventDefault(); const data = new FormData(login); if (data.get("username") === "admin" && data.get("password") === "admin123") { loginPanel.hidden = true; dashboard.hidden = false; } else error.hidden = false; });
-      document.querySelector("#logout").addEventListener("click", () => { dashboard.hidden = true; loginPanel.hidden = false; login.reset(); error.hidden = true; });
+      (() => {
+        const login = document.querySelector("#login-form");
+        const loginPanel = document.querySelector("#login-panel");
+        const dashboard = document.querySelector("#dashboard");
+        const error = document.querySelector("#login-error");
+        const credentials = { username: "admin", password: "admin123" };
+
+        login.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const data = new FormData(login);
+          const valid = data.get("username") === credentials.username && data.get("password") === credentials.password;
+          error.hidden = valid;
+          if (!valid) return;
+          loginPanel.hidden = true;
+          dashboard.hidden = false;
+        });
+
+        document.querySelector("#logout").addEventListener("click", () => {
+          dashboard.hidden = true;
+          loginPanel.hidden = false;
+          login.reset();
+          error.hidden = true;
+        });
+      })();
     </script>
   </body>
 </html>
