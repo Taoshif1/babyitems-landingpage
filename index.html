@@ -1,670 +1,97 @@
-<!DOCTYPE html>
-
-<html lang="bn"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>সহজশপ - বাচ্চাদের স্মার্ট ড্রয়িং প্রজেক্টর টেবিল | ক্যাশ অন ডেলিভারি</title>
-<!-- Google Fonts: Hind Siliguri for authentic Bangla rendering & Inter -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS CDN with forms and container queries -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#fef2f2',
-              100: '#fee2e2',
-              500: '#ef4444',
-              600: '#dc2626',
-              700: '#b91c1c',
-              primary: '#D9232D',
-              dark: '#b3001a'
-            }
-          },
-          fontFamily: {
-            bangla: ['"Hind Siliguri"', '"Noto Sans"', 'system-ui', 'sans-serif'],
-            sans: ['"Hind Siliguri"', '"Noto Sans"', 'Inter', 'sans-serif'],
-            inter: ['Inter', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-<style>
-    body {
-      font-family: 'Hind Siliguri', 'Noto Sans', 'Inter', sans-serif;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .pulse-btn {
-      animation: pulseGlow 2.2s infinite;
-    }
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(217, 35, 45, 0.45); }
-      50% { box-shadow: 0 0 0 10px rgba(217, 35, 45, 0); }
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
-<body class="bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col items-center">
-<!-- Main Container: Centered responsive column -->
-<div class="w-full max-w-3xl min-h-screen bg-white shadow-xl flex flex-col relative border-x border-slate-200">
-<!-- ==========================================
-         SECTION 1: MINIMAL HEADER (STICKY)
-         ========================================== -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-3 flex items-center justify-between shadow-sm">
-<!-- Brand Logo on the left -->
-<a class="flex items-center gap-2 group" href="#">
-<img alt="সহজশপ লোগো" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WP5HD-jbPeip9AhkjBu2rcz7-ZhicDeaTV67WTnjb8yDGxKKPoSYxCY5fX7cCeYcNLgORPXTcblqpu0zvVQvKwOKrmWCcb1V7SZFNIcE0IHxa4ZEYx2JEBe7S0amfCOV0UBDZGH38oFeDDqKIWKvTjiLKxHPClGFoVDjInBNR-WC_La0k9hYWBiJagy26gzbWLapYmMvnV5Qhmbi3Ezn1cu7B73ayd78hUXXgsdcwgDI4GPqVjZpGZJmQ"/>
-</a>
-<!-- One simple CTA on the right -->
-<a class="bg-brand-primary hover:bg-brand-dark text-white text-sm md:text-base font-bold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-1.5 pulse-btn active:scale-95 font-inter" href="#order-section">
-<span>Order Now</span>
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-</svg>
-</a>
-</header>
-<!-- Urgency/Trust Banner for Bangladeshi Shoppers -->
-<div class="bg-amber-50 border-b border-amber-200 px-3 py-1.5 flex items-center justify-center gap-2 text-xs font-semibold text-amber-900 text-center">
-<span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-<span>সারাদেশে ক্যাশ অন ডেলিভারি (পণ্য হাতে পেয়ে মূল্য পরিশোধ)</span>
-</div>
-<main class="flex-1 w-full">
-<!-- ==========================================
-           SECTION 2: FEATURED VIDEOS (HERO - STRICTLY 2 VIDEOS)
-           ========================================== -->
-<section class="p-4 sm:p-6 bg-slate-50 border-b border-slate-200">
-<!-- Bangla label & Headline -->
-<div class="text-center mb-4">
-<span class="inline-block bg-red-100 text-brand-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
-            আমাদের পণ্য
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#d9232d" />
+    <meta
+      name="description"
+      content="সহজশপের বাচ্চাদের সৃজনশীল খেলনার ডেমো ল্যান্ডিং পেজ। ক্যাশ অন ডেলিভারি।"
+    />
+    <title>সহজশপ — সৃজনশীল খেলনা | ক্যাশ অন ডেলিভারি</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="সহজশপ হোম">
+          <span class="brand-mark" aria-hidden="true">সহ</span>
+          <span>
+            <strong>সহজশপ</strong>
+            <small>শিশুর আনন্দ, আপনার স্বস্তি</small>
           </span>
-<h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
-            আপনার পছন্দের পণ্য, এখন সহজেই অর্ডার করুন
-          </h1>
-<p class="text-slate-600 text-sm mt-1">ভিডিওটি দেখে পণ্যটির কার্যকারিতা ও ব্যবহার পদ্ধতি জেনে নিন</p>
-</div>
-<!-- 1. Primary Featured Video Player -->
-<div class="relative rounded-2xl overflow-hidden shadow-lg border-2 border-slate-200 bg-black aspect-video group cursor-pointer" id="featured-video-player" onclick="togglePlayState()">
-<!-- Video Poster Image using IMAGE_7 -->
-<img alt="পণ্য ভিডিও ডেমো" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="main-video-thumbnail" src="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ"/>
-<!-- Gradient overlay for video look -->
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30 pointer-events-none"></div>
-<!-- Video Duration Badge -->
-<div class="absolute top-3 left-3 bg-black/70 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded-md flex items-center gap-1.5">
-<span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-<span id="video-title-pill">স্মার্ট ড্রয়িং প্রজেক্টর ডেমো</span>
-</div>
-<div class="absolute top-3 right-3 bg-black/70 backdrop-blur text-white text-xs font-mono font-medium px-2 py-0.5 rounded">
-            ০১:৪৫
+        </a>
+        <a class="button button-small" href="#order-section">Order Now <span aria-hidden="true">→</span></a>
+      </header>
+
+      <div class="trust-strip"><span class="live-dot" aria-hidden="true"></span>সারাদেশে ক্যাশ অন ডেলিভারি · পণ্য হাতে পেয়ে মূল্য পরিশোধ</div>
+
+      <main id="top">
+        <section class="hero section">
+          <div class="eyebrow">শিশুর সৃজনশীলতার নতুন সঙ্গী</div>
+          <h1>খেলতে খেলতে ছবি আঁকা শেখার আনন্দ</h1>
+          <p class="hero-copy">সুন্দর, মজবুত ও বাচ্চাদের জন্য উপযোগী ড্রয়িং টেবিল ও ডিজিটাল প্যাড। পছন্দের পণ্যটি বেছে নিয়ে নিচে অর্ডার করুন।</p>
+          <div class="demo-video" aria-label="পণ্য ডেমো প্রিভিউ">
+            <img id="video-preview" src="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ" alt="ড্রয়িং প্যাডের পণ্য ডেমো" />
+            <div class="video-shade"></div>
+            <div class="video-copy"><span class="video-label">ডেমো প্রিভিউ</span><strong id="video-title">স্মার্ট ড্রয়িং প্রজেক্টর</strong><span>ভিডিও ফাইল যুক্ত হলে এখানে চালানো যাবে</span></div>
+            <button class="play-demo" id="video-toggle" type="button" aria-label="ডেমো প্রিভিউ পরিবর্তন করুন">▶</button>
           </div>
-<!-- Large Center Play Button -->
-<div class="absolute inset-0 flex items-center justify-center transition-opacity duration-200" id="play-button-overlay">
-<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-brand-primary text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform pulse-btn">
-<svg class="w-8 h-8 sm:w-10 sm:h-10 ml-1 text-white fill-current" viewbox="0 0 24 24">
-<path d="M8 5v14l11-7z"></path>
-</svg>
-</div>
-</div>
-<!-- Bottom Video Controls Simulation -->
-<div class="absolute bottom-0 inset-x-0 p-3 flex items-center gap-3 text-white text-xs bg-gradient-to-t from-black/80 to-transparent">
-<div class="w-3 h-3 bg-red-500 rounded-full"></div>
-<div class="flex-1 h-1.5 bg-white/30 rounded-full overflow-hidden">
-<div class="w-1/3 h-full bg-brand-primary rounded-full"></div>
-</div>
-<span class="text-[11px] text-white/90">HD 1080p</span>
-<svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M4 10h4l5-5v14l-5-5H4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</div>
-</div>
-<!-- 2. Exactly ONE Secondary Video Card beneath primary player (strictly 2 videos max) -->
-<div class="mt-3">
-<button class="w-full bg-white border border-slate-200 hover:border-brand-primary p-2.5 rounded-xl shadow-sm transition-all flex items-center gap-3 group text-left" onclick="switchVideoToggle()" type="button">
-<div class="relative w-28 sm:w-32 aspect-video rounded-lg overflow-hidden flex-shrink-0 bg-slate-900 border border-slate-100">
-<img alt="আনবক্সিং ও রিভিউ ভিডিও" class="w-full h-full object-cover group-hover:scale-105 transition-transform" id="secondary-video-thumb" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE"/>
-<div class="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<div class="w-7 h-7 rounded-full bg-brand-primary text-white flex items-center justify-center shadow-md">
-<svg class="w-3.5 h-3.5 ml-0.5 fill-current" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-</div>
-</div>
-</div>
-<div class="flex-1 min-w-0">
-<div class="flex items-center gap-1.5 mb-1">
-<span class="inline-block w-2 h-2 rounded-full bg-brand-primary"></span>
-<span class="text-[11px] font-bold text-brand-primary uppercase">দ্বিতীয় ভিডিও</span>
-</div>
-<h4 class="text-sm sm:text-base font-bold text-slate-800 group-hover:text-brand-primary transition-colors leading-snug" id="secondary-video-label">
-                আনবক্সিং ও রিভিউ ভিডিও (১:৪৫ মিনিট)
-              </h4>
-<p class="text-xs text-slate-500 mt-0.5">ক্লিক করে ডেমো ও আনবক্সিং ভিডিও দেখুন</p>
-</div>
-<div class="hidden sm:flex items-center text-xs font-semibold text-brand-primary pr-2">
-              ভিডিও দেখুন →
+          <div class="video-switcher">
+            <button class="video-option is-active" type="button" data-video="demo" aria-pressed="true">
+              <span class="thumb"><img src="https://lh3.googleusercontent.com/aida/AEtjO1WVo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE" alt="" loading="lazy" /></span><span><b>পণ্য ডেমো</b><small>ছবিতে পণ্যের ব্যবহার দেখুন</small></span>
+            </button>
+            <button class="video-option" type="button" data-video="unboxing" aria-pressed="false">
+              <span class="thumb"><img src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE" alt="" loading="lazy" /></span><span><b>আনবক্সিং প্রিভিউ</b><small>বাস্তব ভিডিও পরে যুক্ত করা যাবে</small></span>
+            </button>
+          </div>
+          <p class="demo-note">এটি একটি ক্লায়েন্ট ডেমো। প্রকৃত ভিডিও ফাইল যুক্ত হলে এই অংশে HTML5 ভিডিও ব্যবহার করা যাবে।</p>
+        </section>
+
+        <section class="section products-section" id="products">
+          <div class="section-heading"><div class="eyebrow">বিশেষ অফার</div><h2>জনপ্রিয় পণ্যসমূহ</h2><p>পছন্দের পণ্য বেছে নিয়ে অর্ডার ফর্মে যান</p></div>
+          <div class="product-grid">
+            <article class="product-card is-selected" data-product-card>
+              <span class="badge">৩৮% ছাড়</span><img src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE" alt="এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল" loading="lazy" /><div class="product-content"><h3>এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল</h3><p>বাচ্চাদের ছবি আঁকা শেখার ম্যাজিক্যাল প্রজেক্টর</p></div><div class="product-footer"><div><strong>৳৭৯৯</strong><del>৳১২৫০</del></div><button class="button product-button" type="button" data-name="এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল" data-price="799" data-image="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ">Order Now</button></div>
+            </article>
+            <article class="product-card" data-product-card><span class="badge badge-green">বেস্টসেলার</span><img src="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ" alt="রিচার্জেবল এলসিডি রাইটিং ও ড্রয়িং প্যাড" loading="lazy" /><div class="product-content"><h3>রিচার্জেবল এলসিডি রাইটিং ও ড্রয়িং প্যাড</h3><p>চোখের ক্ষতি ছাড়া ডিজিটাল নোট ও স্কেচ প্যাড</p></div><div class="product-footer"><div><strong>৳৪৯৯</strong><del>৳৭৫০</del></div><button class="button product-button" type="button" data-name="রিচার্জেবল এলসিডি রাইটিং ও ড্রয়িং প্যাড" data-price="499" data-image="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ">Order Now</button></div></article>
+            <article class="product-card"><span class="badge badge-blue">নতুন</span><img src="https://lh3.googleusercontent.com/aida/AEtjO1WVo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE" alt="বাচ্চাদের ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড" loading="lazy" /><div class="product-content"><h3>বাচ্চাদের ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড</h3><p>রঙিন স্ক্রিনে আঁকা ও মুছে ফেলার সহজ আনন্দ</p></div><div class="product-footer"><div><strong>৳৬৯৯</strong><del>৳৯৫০</del></div><button class="button product-button" type="button" data-name="বাচ্চাদের ইন্টার‍্যাক্টিভ ড্রয়িং বোর্ড" data-price="699" data-image="https://lh3.googleusercontent.com/aida/AEtjO1WVo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE">Order Now</button></div></article>
+          </div>
+          <div class="template-note">💡 এটি একটি ডেমো ক্যাটালগ। একই ডিজাইন সিস্টেমে আরও পণ্য সহজেই যুক্ত করা যাবে।</div>
+        </section>
+
+        <section class="section order-section" id="order-section">
+          <div class="section-heading"><div class="eyebrow eyebrow-light">ক্যাশ অন ডেলিভারি</div><h2>অর্ডারের তথ্য দিন</h2><p>পণ্য হাতে পেয়ে মূল্য পরিশোধ করুন</p></div>
+          <div class="order-box">
+            <aside class="order-summary">
+              <h3>নির্বাচিত পণ্য</h3><div class="selected-product"><img id="summary-image" src="" alt="" /><div><strong id="summary-name"></strong><span>একক মূল্য: ৳<b id="summary-price"></b></span></div></div>
+              <div class="quantity-row"><span>পণ্যের পরিমাণ</span><div class="quantity"><button type="button" data-quantity="-1" aria-label="পরিমাণ কমান">−</button><output id="quantity">১</output><button type="button" data-quantity="1" aria-label="পরিমাণ বাড়ান">+</button></div></div>
+              <div class="costs"><div><span>পণ্যের মূল্য</span><b>৳<i id="subtotal"></i></b></div><div><span>ডেলিভারি চার্জ</span><b>৳<i id="delivery-cost"></i></b></div><div class="total"><span>সর্বমোট</span><b>৳<i id="total"></i></b></div></div>
+            </aside>
+            <div class="form-area">
+              <div class="demo-alert">এটি একটি ডেমো সাবমিশন — কোনো প্রকৃত অর্ডার বা কুরিয়ার বুকিং হবে না।</div>
+              <form id="order-form" novalidate>
+                <div class="form-grid"><label>নাম *<input name="name" type="text" autocomplete="name" placeholder="আপনার পুরো নাম" required /></label><label>মোবাইল নম্বর *<input name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="01XXXXXXXXX" pattern="01[3-9][0-9]{8}" required /></label></div>
+                <label>সম্পূর্ণ ঠিকানা *<textarea name="address" rows="2" placeholder="বাড়ি, রাস্তা ও এলাকার নাম" required></textarea></label>
+                <div class="form-grid"><label>জেলা *<input name="district" type="text" placeholder="জেলার নাম" required /></label><label>উপজেলা / থানা *<input name="upazila" type="text" placeholder="উপজেলা বা থানার নাম" required /></label></div>
+                <fieldset><legend>ডেলিভারি এলাকা</legend><label class="radio-card is-active"><input type="radio" name="delivery" value="60" checked /><span>ঢাকার ভেতরে</span><b>৳৬০</b></label><label class="radio-card"><input type="radio" name="delivery" value="120" /><span>ঢাকার বাইরে</span><b>৳১২০</b></label></fieldset>
+                <button class="button submit-button" type="submit">Order Now <span aria-hidden="true">→</span></button>
+              </form>
             </div>
-</button>
-</div>
-</section>
-<!-- ==========================================
-           SECTION 3: PRODUCTS
-           ========================================== -->
-<section class="p-4 sm:p-6 bg-white border-b border-slate-200">
-<div class="text-center mb-6">
-<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
-            সীমিত সময়ের বিশেষ অফার
-          </span>
-<h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-            আমাদের জনপ্রিয় পণ্য সমূহ
-          </h2>
-<p class="text-slate-600 text-sm mt-1">পছন্দের পণ্যটি নির্বাচন করে সরাসরি নিচে অর্ডার করুন</p>
-</div>
-<!-- Product Grid: 6 demo cards representing the 19-product template -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-<!-- Product Card 1 -->
-<div class="product-item-card border-2 border-brand-primary rounded-2xl p-4 bg-white shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative ring-2 ring-brand-primary/10">
-<span class="absolute top-3 right-3 bg-red-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-full">
-              ৩৮% ছাড়
-            </span>
-<div>
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-slate-100 mb-3 border border-slate-100">
-<img alt="এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE"/>
-</div>
-<h3 class="font-bold text-base sm:text-lg text-slate-900 leading-snug">
-                এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল
-              </h3>
-<p class="text-slate-500 text-xs mt-1 leading-relaxed">
-                বাচ্চাদের ছবি আঁকা শেখার ম্যাজিক্যাল প্রজেক্টর
-              </p>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-<div>
-<span class="text-xl font-extrabold text-brand-primary font-mono">৳৭৯৯</span>
-<span class="text-xs text-slate-400 line-through ml-1.5 font-mono">৳১২৫০</span>
-</div>
-<button class="bg-brand-primary hover:bg-brand-dark active:scale-95 text-white font-bold text-sm px-4 py-2 rounded-xl transition-colors shadow-sm font-inter" onclick="selectProduct('এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল', 799, 'https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE')">
-                Order Now
-              </button>
-</div>
-</div>
-<!-- Product Card 2 -->
-<div class="product-item-card border border-slate-200 rounded-2xl p-4 bg-white shadow-sm hover:border-brand-primary hover:shadow-md transition-all flex flex-col justify-between relative">
-<span class="absolute top-3 right-3 bg-emerald-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-full">
-              বেস্টসেলার
-            </span>
-<div>
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-slate-100 mb-3 border border-slate-100">
-<img alt="রিচার্জেবল এলসিডি রাইটিং ও ড্রয়িং প্যাড" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ"/>
-</div>
-<h3 class="font-bold text-base sm:text-lg text-slate-900 leading-snug">
-                রিচার্জেবল এলসিডি রাইটিং ও ড্রয়িং প্যাড
-              </h3>
-<p class="text-slate-500 text-xs mt-1 leading-relaxed">
-                চোখের ক্ষতি ছাড়া ডিজিটাল নোট ও স্কেচ প্যাড
-              </p>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-<div>
-<span class="text-xl font-extrabold text-brand-primary font-mono">৳৪৯৯</span>
-<span class="text-xs text-slate-400 line-through ml-1.5 font-mono">৳৭৫০</span>
-</div>
-<button class="bg-brand-primary hover:bg-brand-dark active:scale-95 text-white font-bold text-sm px-4 py-2 rounded-xl transition-colors shadow-sm font-inter" onclick="selectProduct('রিচার্জেবল এলসিডি রাইটিং ও ড্রয়িং প্যাড', 499, 'https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ')">
-                Order Now
-              </button>
-</div>
-</div>
-<!-- Product Card 3 -->
-<div class="product-item-card border border-slate-200 rounded-2xl p-4 bg-white shadow-sm hover:border-brand-primary hover:shadow-md transition-all flex flex-col justify-between relative">
-<div>
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-slate-100 mb-3 border border-slate-100">
-<img alt="স্মার্ট ইন্টারেক্টিভ লার্নিং ডায়াল প্রজেক্টর" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE"/>
-</div>
-<h3 class="font-bold text-base sm:text-lg text-slate-900 leading-snug">
-                স্মার্ট ইন্টারেক্টিভ লার্নিং ডায়াল প্রজেক্টর
-              </h3>
-<p class="text-slate-500 text-xs mt-1 leading-relaxed">
-                ২৪টি আকর্ষণীয় কার্টুন ছবি ও স্লাইড সেট
-              </p>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-<div>
-<span class="text-xl font-extrabold text-brand-primary font-mono">৳৮৫০</span>
-<span class="text-xs text-slate-400 line-through ml-1.5 font-mono">৳১৩৫০</span>
-</div>
-<button class="bg-brand-primary hover:bg-brand-dark active:scale-95 text-white font-bold text-sm px-4 py-2 rounded-xl transition-colors shadow-sm font-inter" onclick="selectProduct('স্মার্ট ইন্টারেক্টিভ লার্নিং ডায়াল প্রজেক্টর', 850, 'https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE')">
-                Order Now
-              </button>
-</div>
-</div>
-<!-- Product Card 4 -->
-<div class="product-item-card border border-slate-200 rounded-2xl p-4 bg-white shadow-sm hover:border-brand-primary hover:shadow-md transition-all flex flex-col justify-between relative">
-<div>
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-slate-100 mb-3 border border-slate-100">
-<img alt="ম্যাজিক ট্রেসিং ড্রয়িং প্র্যাকটিস বোর্ড" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE"/>
-</div>
-<h3 class="font-bold text-base sm:text-lg text-slate-900 leading-snug">
-                ম্যাজিক ট্রেসিং ড্রয়িং প্র্যাকটিস বোর্ড
-              </h3>
-<p class="text-slate-500 text-xs mt-1 leading-relaxed">
-                হাতে-কলমে বর্ণমালা ও ড্রয়িং অনুশীলনের কিট
-              </p>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-<div>
-<span class="text-xl font-extrabold text-brand-primary font-mono">৳৬৫০</span>
-<span class="text-xs text-slate-400 line-through ml-1.5 font-mono">৳৯৫০</span>
-</div>
-<button class="bg-brand-primary hover:bg-brand-dark active:scale-95 text-white font-bold text-sm px-4 py-2 rounded-xl transition-colors shadow-sm font-inter" onclick="selectProduct('ম্যাজিক ট্রেসিং ড্রয়িং প্র্যাকটিস বোর্ড', 650, 'https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE')">
-                Order Now
-              </button>
-</div>
-</div>
-<!-- Product Card 5 -->
-<div class="product-item-card border border-slate-200 rounded-2xl p-4 bg-white shadow-sm hover:border-brand-primary hover:shadow-md transition-all flex flex-col justify-between relative">
-<div>
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-slate-100 mb-3 border border-slate-100">
-<img alt="কালারফুল আর্ট ডুডল ড্রয়িং ট্যাব (১০ ইঞ্চি)" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ"/>
-</div>
-<h3 class="font-bold text-base sm:text-lg text-slate-900 leading-snug">
-                কালারফুল আর্ট ডুডল ড্রয়িং ট্যাব (১০ ইঞ্চি)
-              </h3>
-<p class="text-slate-500 text-xs mt-1 leading-relaxed">
-                রংধনু ডিসপ্লে ও স্টাইলাস পেন সহ বাচ্চাদের উপহার
-              </p>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-<div>
-<span class="text-xl font-extrabold text-brand-primary font-mono">৳৫৯৯</span>
-<span class="text-xs text-slate-400 line-through ml-1.5 font-mono">৳৯৯৯</span>
-</div>
-<button class="bg-brand-primary hover:bg-brand-dark active:scale-95 text-white font-bold text-sm px-4 py-2 rounded-xl transition-colors shadow-sm font-inter" onclick="selectProduct('কালারফুল আর্ট ডুডল ড্রয়িং ট্যাব (১০ ইঞ্চি)', 599, 'https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ')">
-                Order Now
-              </button>
-</div>
-</div>
-<!-- Product Card 6 -->
-<div class="product-item-card border border-slate-200 rounded-2xl p-4 bg-white shadow-sm hover:border-brand-primary hover:shadow-md transition-all flex flex-col justify-between relative">
-<span class="absolute top-3 right-3 bg-red-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-full">
-              মেগা অফার
-            </span>
-<div>
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-slate-100 mb-3 border border-slate-100">
-<img alt="কম্বো প্যাক: প্রজেক্টর টেবিল + মার্কার সেট" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE"/>
-</div>
-<h3 class="font-bold text-base sm:text-lg text-slate-900 leading-snug">
-                কম্বো প্যাক: প্রজেক্টর টেবিল + মার্কার সেট
-              </h3>
-<p class="text-slate-500 text-xs mt-1 leading-relaxed">
-                ৭২ রঙের মার্কার সেট ও ড্রয়িং খাতা সহ স্পেশাল কম্বো
-              </p>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-<div>
-<span class="text-xl font-extrabold text-brand-primary font-mono">৳৯৯৯</span>
-<span class="text-xs text-slate-400 line-through ml-1.5 font-mono">৳১৫০০</span>
-</div>
-<button class="bg-brand-primary hover:bg-brand-dark active:scale-95 text-white font-bold text-sm px-4 py-2 rounded-xl transition-colors shadow-sm font-inter" onclick="selectProduct('কম্বো প্যাক: প্রজেক্টর টেবিল + মার্কার সেট', 999, 'https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE')">
-                Order Now
-              </button>
-</div>
-</div>
-</div>
-<!-- Reusable template notice bar -->
-<div class="mt-6 p-3 rounded-xl bg-slate-100 border border-slate-200 text-center text-xs text-slate-600">
-          💡 ১৯টি পৃথক পণ্যের জন্য একই স্ট্যান্ডার্ড ডিজাইন সিস্টেম প্রযোজ্য
-        </div>
-</section>
-<!-- ==========================================
-           SECTION 4: ORDER (CASH ON DELIVERY ONLY)
-           ========================================== -->
-<section class="p-4 sm:p-6 bg-rose-50/40 border-b border-slate-200" id="order-section">
-<!-- Headline & Supporting Text -->
-<div class="text-center mb-6">
-<span class="inline-flex items-center gap-1.5 bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 shadow-sm">
-<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
-            ক্যাশ অন ডেলিভারি
-          </span>
-<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-            অর্ডার করার জন্য নিচের তথ্যগুলো পূরণ করুন
-          </h2>
-<p class="text-slate-700 text-sm sm:text-base font-semibold mt-1">
-            Cash on Delivery — পণ্য হাতে পেয়ে মূল্য পরিশোধ করুন।
-          </p>
-</div>
-<!-- Order Form Container -->
-<div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden" id="order-box-container">
-<!-- Normal Form State -->
-<div id="order-form-wrapper">
-<div class="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-<!-- LEFT: Selected Product Summary (md:col-span-5) -->
-<div class="p-4 sm:p-6 bg-slate-50/80 md:col-span-5 flex flex-col justify-between">
-<div>
-<h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">নির্বাচিত পণ্যের বিবরণ</h3>
-<div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm">
-<img alt="নির্বাচিত পণ্য" class="w-16 h-16 rounded-lg object-cover border border-slate-100 flex-shrink-0" id="summary-img" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE"/>
-<div class="min-w-0 flex-1">
-<h4 class="font-bold text-slate-900 text-sm leading-snug line-clamp-2" id="summary-title">
-                        এলইডি আর্ট ড্রয়িং প্রজেক্টর টেবিল
-                      </h4>
-<p class="text-brand-primary font-extrabold text-base font-mono mt-0.5">
-                        ৳<span id="summary-unit-price">799</span>
-</p>
-</div>
-</div>
-<!-- Quantity Selector -->
-<div class="mt-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-<span class="text-sm font-bold text-slate-700">পণ্যের পরিমাণ</span>
-<div class="flex items-center border border-slate-300 rounded-lg overflow-hidden bg-slate-50">
-<button class="w-9 h-9 flex items-center justify-center text-slate-700 hover:bg-slate-200 active:bg-slate-300 font-bold text-lg focus:outline-none" onclick="adjustQuantity(-1)" type="button">
-                        −
-                      </button>
-<span class="w-10 text-center font-bold text-slate-900 font-mono text-base" id="quantity-display">
-                        1
-                      </span>
-<button class="w-9 h-9 flex items-center justify-center text-slate-700 hover:bg-slate-200 active:bg-slate-300 font-bold text-lg focus:outline-none" onclick="adjustQuantity(1)" type="button">
-                        +
-                      </button>
-</div>
-</div>
-<!-- Trust Checklist for Bangladeshi Customers -->
-<div class="mt-4 space-y-2 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-200">
-<div class="flex items-center gap-2 text-emerald-700 font-semibold">
-<span>✓</span>
-<span>আগে কোনো অগ্রিম টাকা দিতে হবে না</span>
-</div>
-<div class="flex items-center gap-2 text-slate-700">
-<span>✓</span>
-<span>ডেলিভারি ম্যানের সামনে প্যাকেট খুলে চেক করুন</span>
-</div>
-<div class="flex items-center gap-2 text-slate-700">
-<span>✓</span>
-<span>২ থেকে ৩ দিনের মধ্যে দ্রুত হোম ডেলিভারি</span>
-</div>
-</div>
-</div>
-<!-- Cost Breakdown -->
-<div class="mt-4 pt-3 border-t border-slate-200 text-sm space-y-1.5">
-<div class="flex justify-between text-slate-600">
-<span>পণ্যের মূল্য:</span>
-<span class="font-mono font-bold text-slate-800">৳<span id="calc-subtotal">799</span></span>
-</div>
-<div class="flex justify-between text-slate-600">
-<span>ডেলিভারি চার্জ:</span>
-<span class="font-mono font-bold text-slate-800">৳<span id="calc-delivery">60</span></span>
-</div>
-<div class="flex justify-between text-base font-extrabold text-slate-900 pt-2 border-t border-slate-300">
-<span>সর্বমোট বিল:</span>
-<span class="font-mono text-brand-primary text-xl">৳<span id="calc-total">859</span></span>
-</div>
-</div>
-</div>
-<!-- RIGHT: Order Form (md:col-span-7) -->
-<div class="p-4 sm:p-6 md:col-span-7 bg-white">
-<form class="space-y-4" id="cod-order-form" onsubmit="handleOrderSubmit(event)">
-<!-- Field 1: নাম * -->
-<div>
-<label class="block text-sm font-bold text-slate-800 mb-1">
-                      নাম <span class="text-brand-primary">*</span>
-</label>
-<input class="w-full px-3.5 py-2.5 text-base rounded-xl border border-slate-300 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all placeholder:text-slate-400 bg-slate-50/50" placeholder="আপনার পুরো নাম লিখুন" required="" type="text"/>
-</div>
-<!-- Field 2: মোবাইল নম্বর * -->
-<div>
-<label class="block text-sm font-bold text-slate-800 mb-1">
-                      মোবাইল নম্বর <span class="text-brand-primary">*</span>
-</label>
-<input class="w-full px-3.5 py-2.5 text-base rounded-xl border border-slate-300 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all placeholder:text-slate-400 font-mono bg-slate-50/50" pattern="01[3-9][0-9]{8}" placeholder="01XXXXXXXXX" required="" type="tel"/>
-<p class="text-[11px] text-slate-500 mt-1">সঠিক ১১ ডিজিটের মোবাইল নম্বর দিন</p>
-</div>
-<!-- Field 3: সম্পূর্ণ ঠিকানা * -->
-<div>
-<label class="block text-sm font-bold text-slate-800 mb-1">
-                      সম্পূর্ণ ঠিকানা <span class="text-brand-primary">*</span>
-</label>
-<textarea class="w-full px-3.5 py-2.5 text-base rounded-xl border border-slate-300 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all placeholder:text-slate-400 bg-slate-50/50" placeholder="গ্রাম/রাস্তা, বাড়ি নম্বর, এলাকা বা ল্যান্ডমার্ক বিস্তারিত লিখুন" required="" rows="2"></textarea>
-</div>
-<!-- Field 4 & 5: জেলা * & উপজেলা / থানা * -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<div>
-<label class="block text-sm font-bold text-slate-800 mb-1">
-                        জেলা <span class="text-brand-primary">*</span>
-</label>
-<select class="w-full px-3.5 py-2.5 text-sm sm:text-base rounded-xl border border-slate-300 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none bg-slate-50/50" required="">
-<option value="">জেলা নির্বাচন করুন</option>
-<option value="dhaka">ঢাকা</option>
-<option value="chittagong">চট্টগ্রাম</option>
-<option value="rajshahi">রাজশাহী</option>
-<option value="sylhet">সিলেট</option>
-<option value="khulna">খুলনা</option>
-<option value="barishal">বরিশাল</option>
-<option value="rangpur">রংপুর</option>
-<option value="mymensingh">ময়মনসিংহ</option>
-<option value="other">অন্যান্য জেলা</option>
-</select>
-</div>
-<div>
-<label class="block text-sm font-bold text-slate-800 mb-1">
-                        উপজেলা / থানা <span class="text-brand-primary">*</span>
-</label>
-<input class="w-full px-3.5 py-2.5 text-sm sm:text-base rounded-xl border border-slate-300 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all placeholder:text-slate-400 bg-slate-50/50" placeholder="উপজেলা / থানা লিখুন" required="" type="text"/>
-</div>
-</div>
-<!-- Delivery Area Selector (ঢাকার ভিতরে vs ঢাকার বাইরে) -->
-<div>
-<label class="block text-sm font-bold text-slate-800 mb-2">
-                      ডেলিভারি এলাকা <span class="text-brand-primary">*</span>
-</label>
-<div class="grid grid-cols-2 gap-3">
-<label class="delivery-radio-label flex items-center justify-between p-3 rounded-xl border-2 border-brand-primary bg-red-50/40 cursor-pointer transition-all">
-<div class="flex items-center gap-2">
-<input checked="" class="w-4 h-4 text-brand-primary focus:ring-brand-primary accent-brand-primary" name="delivery_area" onchange="updateDeliveryArea(60)" type="radio" value="dhaka"/>
-<span class="text-sm font-bold text-slate-900">ঢাকার ভিতরে</span>
-</div>
-<span class="text-xs font-mono font-bold text-brand-primary">৳৬০</span>
-</label>
-<label class="delivery-radio-label flex items-center justify-between p-3 rounded-xl border-2 border-slate-200 hover:border-slate-300 bg-white cursor-pointer transition-all">
-<div class="flex items-center gap-2">
-<input class="w-4 h-4 text-brand-primary focus:ring-brand-primary accent-brand-primary" name="delivery_area" onchange="updateDeliveryArea(120)" type="radio" value="outside"/>
-<span class="text-sm font-bold text-slate-900">ঢাকার বাইরে</span>
-</div>
-<span class="text-xs font-mono font-bold text-slate-700">৳১২০</span>
-</label>
-</div>
-</div>
-<!-- Large Dominant Primary CTA: "Order Now" -->
-<div class="pt-2">
-<button class="w-full bg-brand-primary hover:bg-brand-dark active:scale-[0.99] text-white py-4 px-6 rounded-2xl font-extrabold text-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 pulse-btn font-inter" type="submit">
-<span>Order Now</span>
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-</svg>
-</button>
-<p class="text-center text-xs text-slate-600 mt-2 font-medium">
-                      🔒 ১০০% ক্যাশ অন ডেলিভারি — পণ্য হাতে পেয়ে মূল্য দিন
-                    </p>
-</div>
-</form>
-</div>
-</div>
-</div>
-<!-- Success State after submission (hidden by default) -->
-<div class="hidden p-8 sm:p-12 text-center bg-white" id="order-success-screen">
-<div class="w-20 h-20 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 shadow-sm">
-<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
-</svg>
-</div>
-<h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-              🎉 আপনার অর্ডার সফলভাবে গ্রহণ করা হয়েছে!
-            </h3>
-<p class="text-base text-slate-600 mt-2 max-w-md mx-auto">
-              আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেন।
-            </p>
-<div class="my-6 inline-block bg-slate-50 border border-slate-200 rounded-2xl p-4 text-left max-w-sm w-full">
-<div class="text-xs text-slate-500">অর্ডার ট্র্যাকিং নম্বর (Order ID):</div>
-<div class="text-lg font-mono font-bold text-brand-primary">#BD-COD-98421</div>
-<div class="mt-2 text-xs text-slate-600 pt-2 border-t border-slate-200 flex justify-between">
-<span>পেমেন্ট পদ্ধতি:</span>
-<span class="font-bold text-slate-800">ক্যাশ অন ডেলিভারি (COD)</span>
-</div>
-<div class="mt-1 text-xs text-slate-600 flex justify-between">
-<span>মোট প্রদেয় টাকা:</span>
-<span class="font-bold text-emerald-600 font-mono">৳<span id="success-total-bill">859</span></span>
-</div>
-</div>
-<div>
-<button class="text-sm font-bold text-brand-primary hover:underline" onclick="resetOrderForm()">
-                নতুন আরেকটি অর্ডার করুন →
-              </button>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- ==========================================
-         SECTION 5: MINIMAL FOOTER
-         ========================================== -->
-<footer class="bg-slate-900 text-slate-400 py-6 px-4 text-center border-t border-slate-800">
-<div class="max-w-md mx-auto space-y-2">
-<div class="text-base font-bold text-white tracking-wide">
-          সহজশপ (ShohojShop)
-        </div>
-<div class="text-sm text-slate-300">
-          যোগাযোগ করুন
-        </div>
-<div class="text-sm text-slate-300 flex items-center justify-center gap-1.5">
-<span>মোবাইল:</span>
-<a class="text-brand-primary font-mono font-bold hover:underline" href="tel:01700000000">01XXXXXXXXX</a>
-</div>
-<div class="text-xs text-slate-400">
-<a class="hover:text-white transition-colors underline" href="https://facebook.com" target="_blank">
-            ফেসবুক মেসেঞ্জারে যোগাযোগ করুন
-          </a>
-</div>
-<div class="text-[11px] text-slate-500 pt-3 border-t border-slate-800">
-          সর্বস্বত্ব সংরক্ষিত © ২০২৬
-        </div>
-</div>
-</footer>
-<!-- Fixed Floating Mobile Bottom CTA bar (Exact "Order Now" English button) -->
-<div class="md:hidden fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur border-t border-slate-200 p-3 z-40 flex items-center justify-between gap-3 shadow-2xl">
-<div class="leading-tight">
-<span class="text-[11px] text-slate-500 block">ক্যাশ অন ডেলিভারি</span>
-<span class="text-base font-extrabold text-brand-primary font-mono" id="floating-price">৳৭৯৯</span>
-</div>
-<a class="flex-1 bg-brand-primary hover:bg-brand-dark text-white font-bold py-2.5 px-4 rounded-xl text-center text-sm shadow-md pulse-btn font-inter" href="#order-section">
-        Order Now
-      </a>
-</div>
-</div>
-<!-- Interactive JavaScript -->
-<script>
-    let currentUnitPrice = 799;
-    let currentQty = 1;
-    let currentDelivery = 60;
-    let isPlaying = false;
-    let currentActiveVideo = 1;
+          </div>
+          <div class="success-box" id="success-box" hidden><div class="success-icon">✓</div><h2>ডেমো অর্ডার প্রস্তুত হয়েছে!</h2><p>এটি কেবল ক্লায়েন্ট প্রেজেন্টেশনের জন্য একটি সফলতার স্ক্রিন। কোনো প্রকৃত অর্ডার পাঠানো হয়নি।</p><div class="order-id"><span>ডেমো রেফারেন্স</span><strong id="order-id"></strong><div><span>মোট প্রদেয়</span><b>৳<i id="success-total"></i></b></div></div><button class="text-button" id="new-order" type="button">নতুন অর্ডার তৈরি করুন →</button></div>
+        </section>
+      </main>
 
-    // Toggle between the strictly 2 videos
-    function switchVideoToggle() {
-      const mainImg = document.getElementById('main-video-thumbnail');
-      const mainTitle = document.getElementById('video-title-pill');
-      const secThumb = document.getElementById('secondary-video-thumb');
-      const secLabel = document.getElementById('secondary-video-label');
-
-      if (currentActiveVideo === 1) {
-        mainImg.src = "https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE";
-        mainTitle.innerText = "আনবক্সিং ও রিভিউ ভিডিও";
-        secThumb.src = "https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ";
-        secLabel.innerText = "স্মার্ট ড্রয়িং প্রজেক্টর ডেমো (১:৪৫ মিনিট)";
-        currentActiveVideo = 2;
-      } else {
-        mainImg.src = "https://lh3.googleusercontent.com/aida/AEtjO1WNjMo6tjab06p3f7epmLD4q6VWLejueLUxGuCDSkiFQv0nchYhjUhiEq25NcR9ucMz6qAT9hZwGdAMuNyDyEtyvw2WuUPHg1YffP-h3WYs7Od1k2y-et5ghBuTMhPENYjIxGSTCSLdQhRGY_vxY40IWKgSBjmaeI6bVrlV2aiChwM9Kig61jb4JKfsjrC4luK_1wt8wPu975Mn320xVPJjOmVeaR0DwaT_jDrDi2PjipGWl4mynTgyiQ";
-        mainTitle.innerText = "স্মার্ট ড্রয়িং প্রজেক্টর ডেমো";
-        secThumb.src = "https://lh3.googleusercontent.com/aida/AEtjO1Vo62uo_zhrVS1zQ-8fus740Uf4lCreDGpBoAiJPtF4mgWRufi7Y39PFyoQAb5KqHXaQTYOnK581Rn_WRcRPVHsdEmr6I7UudLIHV_fLB8FhR2QfW0Z19EqBWF5f5jBgl8uQe8ocr4tKQgCmtko35UGX-RoEj9op_fNrbvOiWqulb4YpYatQlkDoWcmJTZhQ_4dsxeNB6Lrg2jezztMUsVk8m54c3nx9u82qEcdCHv85N8nWvir0DHePGE";
-        secLabel.innerText = "আনবক্সিং ও রিভিউ ভিডিও (১:৪৫ মিনিট)";
-        currentActiveVideo = 1;
-      }
-    }
-
-    // Toggle video play state simulation
-    function togglePlayState() {
-      const playOverlay = document.getElementById('play-button-overlay');
-      isPlaying = !isPlaying;
-      if (isPlaying) {
-        playOverlay.classList.add('opacity-0');
-      } else {
-        playOverlay.classList.remove('opacity-0');
-      }
-    }
-
-    // Select Product from Product Grid and populate order form
-    function selectProduct(name, price, img) {
-      currentUnitPrice = price;
-      document.getElementById('summary-title').innerText = name;
-      document.getElementById('summary-img').src = img;
-      document.getElementById('summary-unit-price').innerText = price;
-      document.getElementById('floating-price').innerText = '৳' + price;
-      updateCalculations();
-      
-      // Smooth scroll to order section
-      document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Adjust Quantity
-    function adjustQuantity(delta) {
-      currentQty = Math.max(1, currentQty + delta);
-      document.getElementById('quantity-display').innerText = currentQty;
-      updateCalculations();
-    }
-
-    // Update Delivery Area Radio
-    function updateDeliveryArea(charge) {
-      currentDelivery = charge;
-      document.querySelectorAll('.delivery-radio-label').forEach(label => {
-        const radio = label.querySelector('input[type="radio"]');
-        if (radio && radio.checked) {
-          label.className = 'delivery-radio-label flex items-center justify-between p-3 rounded-xl border-2 border-brand-primary bg-red-50/40 cursor-pointer transition-all';
-        } else {
-          label.className = 'delivery-radio-label flex items-center justify-between p-3 rounded-xl border-2 border-slate-200 hover:border-slate-300 bg-white cursor-pointer transition-all';
-        }
-      });
-      updateCalculations();
-    }
-
-    // Recalculate totals
-    function updateCalculations() {
-      const subtotal = currentUnitPrice * currentQty;
-      const total = subtotal + currentDelivery;
-
-      document.getElementById('calc-subtotal').innerText = subtotal;
-      document.getElementById('calc-delivery').innerText = currentDelivery;
-      document.getElementById('calc-total').innerText = total;
-      document.getElementById('success-total-bill').innerText = total;
-    }
-
-    // Handle Order Submit
-    function handleOrderSubmit(e) {
-      e.preventDefault();
-      document.getElementById('order-form-wrapper').classList.add('hidden');
-      document.getElementById('order-success-screen').classList.remove('hidden');
-      document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Reset Form
-    function resetOrderForm() {
-      document.getElementById('cod-order-form').reset();
-      currentQty = 1;
-      document.getElementById('quantity-display').innerText = '1';
-      updateDeliveryArea(60);
-      document.getElementById('order-success-screen').classList.add('hidden');
-      document.getElementById('order-form-wrapper').classList.remove('hidden');
-    }
-  </script>
-</body></html>
+      <footer class="site-footer"><strong>সহজশপ</strong><span>ক্লায়েন্ট ডেমো · প্রকৃত ব্যবসায়িক তথ্য নয়</span><a href="admin.html">ডেমো অ্যাডমিন</a><small>© ২০২৬ · ভবিষ্যৎ সংস্করণে প্রকৃত যোগাযোগ ও অর্ডার সিস্টেম যুক্ত হবে</small></footer>
+      <div class="mobile-cta"><span>মোট ৳<b id="mobile-total">৮৫৯</b></span><a class="button" href="#order-section">Order Now</a></div>
+    </div>
+  </body>
+</html>
