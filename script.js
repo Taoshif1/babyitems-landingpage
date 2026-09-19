@@ -11,12 +11,11 @@
   function render() {
     const subtotal = state.price * state.quantity;
     const total = subtotal + state.delivery;
-    $("quantity").value = banglaNumber(state.quantity);
     $("quantity").textContent = banglaNumber(state.quantity);
-    $("summary-price").textContent = state.price;
-    $("subtotal").textContent = subtotal;
-    $("delivery-cost").textContent = state.delivery;
-    $("total").textContent = total;
+    $("summary-price").textContent = banglaNumber(state.price);
+    $("subtotal").textContent = banglaNumber(subtotal);
+    $("delivery-cost").textContent = banglaNumber(state.delivery);
+    $("total").textContent = banglaNumber(total);
     $("mobile-total").textContent = banglaNumber(total);
   }
   function selectProduct(button) {
@@ -31,7 +30,7 @@
   }
   function setVideo(type) {
     const isPrimary = type === "demo";
-    $("video-preview").src = isPrimary ? images.secondary : images.primary;
+    $("video-preview").src = isPrimary ? images.primary : images.secondary;
     $("video-title").textContent = isPrimary ? "স্মার্ট ড্রয়িং প্রজেক্টর" : "আনবক্সিং প্রিভিউ";
     document.querySelectorAll(".video-option").forEach((button) => {
       const active = button.dataset.video === type;
@@ -55,8 +54,8 @@
     event.preventDefault();
     const form = event.currentTarget;
     if (!form.checkValidity()) { form.reportValidity(); return; }
-    $("order-id").textContent = `DEMO-${Date.now().toString().slice(-6)}`;
-    $("success-total").textContent = state.price * state.quantity + state.delivery;
+    $("order-id").textContent = `DEMO-${banglaNumber(Date.now().toString().slice(-6))}`;
+    $("success-total").textContent = banglaNumber(state.price * state.quantity + state.delivery);
     form.closest(".order-box").hidden = true;
     $("success-box").hidden = false;
     $("success-box").scrollIntoView({ behavior: "smooth", block: "center" });
